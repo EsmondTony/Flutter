@@ -1,0 +1,1399 @@
+CONTAINER 
+
+PROGRAM 1
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Row(
+            //mainAxisSize: MainAxisSize.min,
+            //verticalDirection: VerticalDirection.down,
+            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.white,
+                child: Text('Container 1'),
+              ),
+              SizedBox(
+                //height: 50
+                width: 50,
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.blue,
+                child: Text('Container 2'),
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.red,
+                child: Text('Container 3'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+NOTE :
+
+( crossAxisAlignment: CrossAxisAlignment.stretch )== ( width = double.infinity )
+
+
+----------------------------------------------------------------------------------------
+
+CONTAINER 
+
+PROGRAM 2
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            //mainAxisSize: MainAxisSize.min,
+            //verticalDirection: VerticalDirection.down,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/tony.jpg'),
+              ),
+              Text(
+                'Esmond Tony',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 40.0
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.teal[100],
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: Colors.teal,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        '+91 7288452765',
+                        style: TextStyle(
+                          color: Colors.teal[900],
+                          fontFamily: 'SourceSansPro',
+                          fontSize: 20.0,
+                        ),
+                      )
+                    ],
+                  ),
+                
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'esmondtonys123@gmail.com',
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                      ),
+                    )
+                  ],
+                ),
+              )
+
+
+            ]),
+        ),
+      ),
+    );
+  }
+}
+
+----------------------------------------------------------------------------------------
+business card project
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Column(
+            //mainAxisSize: MainAxisSize.min,
+            //verticalDirection: VerticalDirection.down,
+            mainAxisAlignment: MainAxisAlignment.center,
+            //crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/esmond.jpg'),
+              ),
+              Text(
+                'Esmond Tony',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 40.0
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.teal[100],
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                child: ListTile(
+                  leading:Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                      '+91 7288452765',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                      ),
+                )
+
+              ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                child:ListTile(
+                  leading:Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title:Text(
+                    'esmondtony@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                    ),
+                )
+              )
+
+
+            ),
+        ]),
+      ),
+    ),
+    );
+  }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DICE
+
+PROGRAM 1
+
+import 'package:flutter/material.dart';
+
+void main() {
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Center(
+            child: Text('Dicee'),
+          ),
+          backgroundColor: Colors.red,
+        ),
+        body: DicePage(),
+      ),
+    ),
+  );
+}
+
+class DicePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            //flex: 2,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Image.asset('images/dice1.png'),
+            ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+ 
+
+---------------------------------------------------------------------------------------------
+
+
+PROGRAM 2
+
+import 'package:flutter/material.dart';
+
+void main() {
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Center(
+            child: Text('Dice'),
+          ),
+          backgroundColor: Colors.red,
+        ),
+        body: DicePage(),
+      ),
+    ),
+  );
+}
+
+class DicePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            //flex: 2,
+            child: FlatButton(
+              onPressed: (){
+                print('Left button got pressed');
+              },
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+          Expanded(
+            child: FlatButton(
+              onPressed: (){
+                print('Right button got pressed');
+              },
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+--------------------------------------------------------------------------------------------------------
+
+DICE PROJECT
+
+import 'package:flutter/material.dart';
+import 'dart:math';
+
+void main() {
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: Center(
+            child: Text('Dice'),
+          ),
+          backgroundColor: Colors.red,
+        ),
+        body: DicePage(),
+      ),
+    ),
+  );
+}
+
+class DicePage extends StatefulWidget {
+  @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int leftDiceNumber = 1;
+  int rightDiceNumber = 1;
+
+  void changeDice(){
+    setState(() {
+      leftDiceNumber = Random().nextInt(6)+1;
+      rightDiceNumber = Random().nextInt(6)+1;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            //flex: 2,
+            child: FlatButton(
+              onPressed: (){
+                changeDice();
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
+            ),
+          ),
+          Expanded(
+            child: FlatButton(
+              onPressed: (){
+                changeDice();
+              },
+              child: Image.asset('images/dice$rightDiceNumber.png'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ASK ME ANYTHING PROJECT
+
+
+import 'package:flutter/material.dart';
+import 'dart:math';
+
+void main() => runApp(
+      MaterialApp(home: BallPage()),
+    );
+
+class BallPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        backgroundColor: Colors.blue[900],
+        title: Center(
+          child: Text('Ask Me Anything'),
+        ),
+      ),
+      body: Ball(),
+    );
+  }
+}
+
+class Ball extends StatefulWidget {
+  @override
+  _BallState createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  int ballNumber =1;
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: FlatButton(
+        onPressed: (){
+          setState(() {
+            ballNumber = Random().nextInt(5)+1;
+            print(ballNumber);
+          });
+        },
+        child: Image.asset('images/ball$ballNumber.png'),
+      ),
+    );
+  }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+XYLOPHONE PROJECT
+
+import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
+
+void main() => runApp(XylophoneApp());
+
+class XylophoneApp extends StatelessWidget {
+  void playSound (int soundNumber){
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
+
+  Expanded buildKey({Color color, int soundNumber}){
+    return Expanded(
+      child: FlatButton(
+        color: color,
+        onPressed: () {
+          playSound (soundNumber);
+        },
+      ),
+    );
+  }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              buildKey(color: Colors.red, soundNumber: 1),
+              buildKey(color: Colors.orange, soundNumber: 2),
+              buildKey(color: Colors.yellow, soundNumber: 3),
+              buildKey(color: Colors.green, soundNumber: 4),
+              buildKey(color: Colors.teal, soundNumber: 5),
+              buildKey(color: Colors.blue, soundNumber: 6),
+              buildKey(color: Colors.purple, soundNumber: 7),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________
+______________________________________________________________________________________________________________________________________________________________________________________________________
+
+QUIZZER APP
+
+PROGRAM 1
+
+import 'package:flutter/material.dart';
+import 'question.dart';
+
+void main() => runApp(Quizzler());
+
+class Quizzler extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.grey.shade900,
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            child: QuizPage(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class QuizPage extends StatefulWidget {
+  @override
+  _QuizPageState createState() => _QuizPageState();
+}
+
+class _QuizPageState extends State<QuizPage> {
+  // List<Icon> scoreKeeper = [];
+  //
+  // List<String> questions = [
+  //   'You can lead a cow down stairs but not up stairs.',
+  //   'Approximately one quarter of human bones are in the feet.',
+  //   'A slug\'s blood is green.'
+  // ];
+  // List<bool> answers = [
+  //   false,
+  //   true,
+  //   true,
+  // ];
+  // Question q1 = Question(q: 'You can lead a cow down stairs but not up stairs.', a: false);
+  // Question q2 = Question(q: 'Approximately one quarter of human bones are in the feet.', a: true);
+  // Question q3 = Question(q: 'A slug\'s blood is green.', a: false);
+
+  int questionNumber = 0;
+  List<Question> questionBank = [
+    Question(q: 'You can lead a cow down stairs but not up stairs.' ,a: false ),
+    Question(q: 'Approximately one quarter of human bones are in the feet.' ,a: true),
+    Question(q: 'A slug\'s blood is green.',a: true )
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Expanded(
+          flex: 5,
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Center(
+              child: Text(
+                questionBank[questionNumber].questionText,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 25.0,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: FlatButton(
+              textColor: Colors.white,
+              color: Colors.green,
+              child: Text(
+                'True',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                ),
+              ),
+              onPressed: () {
+                bool correctAnswer = questionBank[questionNumber].questionAnswer;
+                if(correctAnswer == true){
+                  print('User got it right');
+                }else{
+                print('User got it wrong');
+                }
+                setState(() {
+                  questionNumber++;
+                });
+              },
+            ),
+          ),
+        ),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: FlatButton(
+              color: Colors.red,
+              child: Text(
+                'False',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: () {
+                bool correctAnswer = questionBank[questionNumber].questionAnswer;
+                if(correctAnswer == false){
+                  print('User got it right');
+                }else{
+                  print('User got it wrong');
+                }
+                setState(() {
+                  questionNumber++;
+                });
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/*
+question1: 'You can lead a cow down stairs but not up stairs.', false,
+question2: 'Approximately one quarter of human bones are in the feet.', true,
+question3: 'A slug\'s blood is green.', true,
+*/
+
+
+
+question.dart
+-------------
+
+class Question {
+  String questionText;
+  bool questionAnswer;
+
+  Question({String q,bool a}){
+    questionText = q;
+    questionAnswer = a;
+  }
+}
+
+____________________________________________________________________________________
+------------------------------------------------------------------------------------
+
+QUIZZER APP PROJECT
+
+main.dart
+---------
+
+import 'package:flutter/material.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
+import 'quiz_brain.dart';
+
+QuizBrain quizBrain = QuizBrain();
+
+void main() => runApp(Quizzler());
+
+class Quizzler extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.grey.shade900,
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            child: QuizPage(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class QuizPage extends StatefulWidget {
+  @override
+  _QuizPageState createState() => _QuizPageState();
+}
+
+class _QuizPageState extends State<QuizPage> {
+  List<Icon> scoreKeeper = [];
+
+  void checkAnswer(bool userPickedAnswer) {
+    bool correctAnswer = quizBrain.getCorrectAnswer();
+
+    setState(() {
+      if(quizBrain.isFinished() == true){
+        // Alert(
+        //   context: context,
+        //   type: AlertType.error,
+        //   title: "FINISHED",
+        //   desc: "You've reached the end of the quiz",
+        //   buttons: [
+        //     DialogButton(
+        //       child: Text(
+        //         "CANCEL",
+        //         style: TextStyle(color: Colors.white, fontSize: 20),
+        //       ),
+        //       onPressed: () => Navigator.pop(context),
+        //       width: 120,
+        //     )
+        //   ],
+        // ).show();
+        Alert(context: context, title: "FINISHED", desc: "You've reached the end of the quiz").show();
+        quizBrain.resetQuestionNumber();
+        scoreKeeper.clear();
+      }else {
+        if (userPickedAnswer == correctAnswer) {
+          scoreKeeper.add(Icon(
+            Icons.check,
+            color: Colors.green,
+          ));
+        } else {
+          scoreKeeper.add(Icon(
+            Icons.close,
+            color: Colors.red,
+          ));
+        }
+        quizBrain.nextQuestion();
+      }
+    });
+
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Expanded(
+          flex: 5,
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Center(
+              child: Text(
+                quizBrain.getQuestionText(),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 25.0,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ),
+
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: FlatButton(
+              textColor: Colors.white,
+              color: Colors.green,
+              child: Text(
+                'True',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                ),
+              ),
+              onPressed: () {
+                //The user picked true.
+                checkAnswer(true);
+              },
+            ),
+          ),
+        ),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: FlatButton(
+              color: Colors.red,
+              child: Text(
+                'False',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: () {
+                //The user picked false.
+                checkAnswer(false);
+              },
+            ),
+          ),
+        ),
+        Row(
+          children: scoreKeeper,
+        )
+      ],
+    );
+  }
+}
+
+/*
+question1: 'You can lead a cow down stairs but not up stairs.', false,
+question2: 'Approximately one quarter of human bones are in the feet.', true,
+question3: 'A slug\'s blood is green.', true,
+*/
+
+
+
+
+quiz_brain.dart
+---------------
+
+import 'question.dart';
+
+class QuizBrain {
+  int _questionNumber = 0;
+
+  List<Question> _questionBank = [
+    Question('Some cats are actually allergic to humans', true),
+    Question('You can lead a cow down stairs but not up stairs.', false),
+    Question('Approximately one quarter of human bones are in the feet.', true),
+    Question('A slug\'s blood is green.', true),
+    Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
+    Question('It is illegal to pee in the Ocean in Portugal.', true),
+    Question(
+        'No piece of square dry paper can be folded in half more than 7 times.',
+        false),
+    Question(
+        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
+        true),
+    Question(
+        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
+        false),
+    Question(
+        'The total surface area of two human lungs is approximately 70 square metres.',
+        true),
+    Question('Google was originally called \"Backrub\".', true),
+    Question(
+        'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
+        true),
+    Question(
+        'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
+        true),
+  ];
+
+  void nextQuestion() {
+    if (_questionNumber < _questionBank.length - 1) {
+      _questionNumber++;
+    }
+  }
+
+  String getQuestionText() {
+    return _questionBank[_questionNumber].questionText;
+  }
+
+  bool getCorrectAnswer() {
+    return _questionBank[_questionNumber].questionAnswer;
+  }
+
+  bool isFinished(){
+    if(_questionNumber == 12){
+      print('end of the question');
+      return true;
+    }else{
+      print(_questionNumber);
+      return false;
+    }
+  }
+
+  void resetQuestionNumber(){
+    _questionNumber = 0;
+  }
+
+
+}
+
+
+question.dart
+-------------
+
+class Question {
+  String questionText;
+  bool questionAnswer;
+
+  Question(this.questionText, this.questionAnswer);
+}
+
+
+__________________________________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________________________________________________________________________________
+
+DESTINI PROJECT
+
+import 'package:destini_challenge_starting/story_brain.dart';
+import 'package:flutter/material.dart';
+
+
+void main() => runApp(Destini());
+
+class Destini extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark(),
+      home: StoryPage(),
+    );
+  }
+}
+
+
+StoryBrain storyBrain = StoryBrain();
+
+class StoryPage extends StatefulWidget {
+  _StoryPageState createState() => _StoryPageState();
+}
+
+class _StoryPageState extends State<StoryPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/background.png'),
+            fit: BoxFit.cover
+          )
+        ),
+        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        constraints: BoxConstraints.expand(),
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                flex: 12,
+                child: Center(
+                  child: Text(
+                    storyBrain.getStory(),
+                    style: TextStyle(
+                      fontSize: 25.0,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: FlatButton(
+                  onPressed: () {
+                    setState(() {
+                      storyBrain.nextStory(1);
+                    });
+
+                  },
+                  color: Colors.red,
+                  child: Text(
+                    storyBrain.getChoice1(),
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Expanded(
+                flex: 2,
+                child: Visibility(
+                  visible: storyBrain.buttonShouldVisible(),
+                  child: FlatButton(
+                    onPressed: () {
+                      setState(() {
+                        storyBrain.nextStory(2);
+                      });
+
+                    },
+                    color: Colors.blue,
+                    child: Text(
+                      storyBrain.getChoice2(),
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+story_brain.dart
+----------------
+
+import 'story.dart';
+
+class StoryBrain{
+
+  int _storyNumber = 0;
+  List<Story> _storyData = [
+    Story(
+        storyTitle:
+        'Your car has blown a tire on a winding road in the middle of nowhere with no cell phone reception. You decide to hitchhike. A rusty pickup truck rumbles to a stop next to you. A man with a wide brimmed hat with soulless eyes opens the passenger door for you and asks: "Need a ride, boy?".',
+        choice1: 'I\'ll hop in. Thanks for the help!',
+        choice2: 'Better ask him if he\'s a murderer first.'),
+    Story(
+        storyTitle: 'He nods slowly, unphased by the question.',
+        choice1: 'At least he\'s honest. I\'ll climb in.',
+        choice2: 'Wait, I know how to change a tire.'),
+    Story(
+        storyTitle:
+        'As you begin to drive, the stranger starts talking about his relationship with his mother. He gets angrier and angrier by the minute. He asks you to open the glovebox. Inside you find a bloody knife, two severed fingers, and a cassette tape of Elton John. He reaches for the glove box.',
+        choice1: 'I love Elton John! Hand him the cassette tape.',
+        choice2: 'It\'s him or me! You take the knife and stab him.'),
+    Story(
+        storyTitle:
+        'What? Such a cop out! Did you know traffic accidents are the second leading cause of accidental death for most adult age groups?',
+        choice1: 'Restart',
+        choice2: ''),
+    Story(
+        storyTitle:
+        'As you smash through the guardrail and careen towards the jagged rocks below you reflect on the dubious wisdom of stabbing someone while they are driving a car you are in.',
+        choice1: 'Restart',
+        choice2: ''),
+    Story(
+        storyTitle:
+        'You bond with the murderer while crooning verses of "Can you feel the love tonight". He drops you off at the next town. Before you go he asks you if you know any good places to dump bodies. You reply: "Try the pier".',
+        choice1: 'Restart',
+        choice2: '')
+  ];
+
+  String getStory(){
+    return _storyData[_storyNumber].storyTitle;
+  }
+
+  String getChoice1(){
+    return _storyData[_storyNumber].choice1;
+  }
+
+  String getChoice2(){
+    return _storyData[_storyNumber].choice2;
+  }
+
+  void nextStory(int choiceNumber){
+    if(_storyNumber== 0 && choiceNumber == 1){
+      _storyNumber = 2;
+    }else if(_storyNumber == 0 && choiceNumber == 2){
+      _storyNumber++;
+    }else if(_storyNumber == 2 && choiceNumber == 1){
+      _storyNumber = 5;
+    }else if(_storyNumber == 2 && choiceNumber == 2){
+      _storyNumber = 4;
+    }else if(_storyNumber == 1 && choiceNumber == 1){
+      _storyNumber = 2;
+    }else if(_storyNumber == 1 && choiceNumber == 2){
+      _storyNumber = 3;
+    }else if((_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5 ) && choiceNumber == 1){
+      restart();
+    }
+  }
+
+  void restart(){
+    _storyNumber = 0;
+  }
+
+  bool buttonShouldVisible(){
+    if(_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2 ){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+}
+
+
+
+story.dart
+----------
+
+
+
+class Story{
+  String storyTitle;
+  String choice1;
+  String choice2;
+
+  Story({String storyTitle, String choice1, String choice2}){
+    this.storyTitle = storyTitle;
+    this.choice1 = choice1;
+    this.choice2 = choice2;
+  }
+}
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________________
+
+BMI CALCULATOR
+-------------- 
+
+PROGRAM 1
+---------
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(BMICalculator());
+
+class BMICalculator extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Color(0xFF0B1033),
+        scaffoldBackgroundColor: Color(0xFF0B1033),
+        accentColor: Colors.purple,
+        textTheme: TextTheme(
+          body1: TextStyle(color: Colors.white),
+        ),
+      ),
+      home: InputPage(),
+    );
+  }
+}
+
+class InputPage extends StatefulWidget {
+  @override
+  _InputPageState createState() => _InputPageState();
+}
+
+class _InputPageState extends State<InputPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text('BMI CALCULATOR'),
+        ),
+      ),
+      body: Center(
+        child: Text('Body Text'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+________________________________________________________________________________
+
+PROGRAM 2
+
+
+
+
+
+
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________
+
+NAVIGATION
+----------
+
+
+main.dart
+---------
+
+import 'package:flutter/material.dart';
+import 'screen2.dart';
+import 'screen1.dart';
+import 'screen0.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Screen0(),
+        '/first': (context) => Screen1(),
+      '/second' : (context) => Screen2(),
+      },
+    );
+  }
+}
+
+
+
+screen0.dart
+------------
+
+import 'package:flutter/material.dart';
+
+class Screen0 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        title: Text('Screen 0'),
+      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.red
+              ),
+              child: Text('Go To Screen 1'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/first');
+              },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.blue
+              ),
+              child: Text('Go To Screen 2'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/second');
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+screen1.dart
+------------
+
+
+import 'package:flutter/material.dart';
+import 'screen2.dart';
+
+class Screen1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: Text('Screen 1'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          // style: ButtonStyle(
+          //   foregroundColor: MaterialStateProperty.all(Colors.red)
+          // ),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.red
+          ),
+          child: Text('Go Forwards To Screen 2'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return Screen2();
+                },
+              ),
+            );
+        }
+        ),
+      )
+    );
+  }
+}
+
+
+screen2.dart
+-------------
+
+import 'package:flutter/material.dart';
+
+class Screen2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('Screen 2'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: Colors.blue
+          ),
+          child: Text('Go Back To Screen 1'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
+
+____________________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________________
+
+MAPS 
+-----
+
+
+Map<String, int> phonebook = {
+  'james' :123456789,
+  'anderson': 098765432
+};
+phoneBook['Angela'] = 1234567890; // inserting new values in map
+print(phoneBook['james']);
+print(phoneBook.length);
+print(phoneBook.keys);
+print(phoneBook.values);
+
+________________________________________________________________________________________
